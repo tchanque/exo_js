@@ -45,7 +45,6 @@ console.log("Le bouquin le plus emprunté est " + maxRentedBook.title);
 const minRentedBook = books.reduce((min, book) => min.rented < book.rented ? min : book);
 console.log("Le bouquin le moins emprunté est " + minRentedBook.title);
 
-
 const myBook = books.find((book) => book.id === 873495);
 console.log("Le bouquin avec l'ID 873495 est " + myBook)
 

@@ -45,13 +45,15 @@ console.log("Le bouquin le plus emprunté est " + maxRentedBook.title);
 const minRentedBook = books.reduce((min, book) => min.rented < book.rented ? min : book);
 console.log("Le bouquin le moins emprunté est " + minRentedBook.title);
 
+
 const myBook = books.find((book) => book.id === 873495);
-console.log(myBook)
+console.log("Le bouquin avec l'ID 873495 est " + myBook)
 
 const bookToDelete = books.find((book) => book.id === 133712);
 console.log("Ce bouquin va être détruit de la BDD " + bookToDelete.title);
 const filteredBooks = books.filter(book => book !== bookToDelete )
-console.log(filteredBooks);
+
+console.log("Voici la liste des bouquins, sans le dernier" + filteredBooks);
 
 console.log("Voici la liste des bouquins triés par ordre alphabétique: ")
 console.log(filteredBooks.sort((a, b) => a.title.localeCompare(b.title)));
